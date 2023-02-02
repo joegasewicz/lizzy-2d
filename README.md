@@ -1,2 +1,2 @@
 # Lizzy
-2d game egine
+A 2d game engine
