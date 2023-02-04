@@ -5,11 +5,11 @@
 #include <SDL2/SDL.h>
 
 
-class Game
+class Lizzy2D
 {
     public:
-        Game();
-        virtual ~Game();
+        Lizzy2D();
+        virtual ~Lizzy2D();
 
         bool init(const char *title, int xpos, int ypos, int height, int width, bool fullscreen);
         void render();

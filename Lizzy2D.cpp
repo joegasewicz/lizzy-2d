@@ -1,16 +1,16 @@
-#include "Game.h"
+#include "Lizzy2D.h"
 
-Game::Game()
+Lizzy2D::Lizzy2D()
 {
     //ctor
 }
 
-Game::~Game()
+Lizzy2D::~Lizzy2D()
 {
     //dtor
 }
 
-bool Game::init(const char* title, int xpos, int ypos, int height, int width, bool fullscreen)
+bool Lizzy2D::init(const char* title, int xpos, int ypos, int height, int width, bool fullscreen)
 {
     int flags = 0;
     if (fullscreen)
@@ -63,7 +63,7 @@ bool Game::init(const char* title, int xpos, int ypos, int height, int width, bo
     return true;
 }
 
-void Game::handleEvents()
+void Lizzy2D::handleEvents()
 {
     SDL_Event event;
     if (SDL_PollEvent(&event))
@@ -79,18 +79,18 @@ void Game::handleEvents()
     }
 }
 
-void Game::update()
+void Lizzy2D::update()
 {
 
 }
 
-void Game::render()
+void Lizzy2D::render()
 {
     SDL_RenderClear(m_pRenderer); // clear renderer to draw color
     SDL_RenderPresent(m_pRenderer); // draw the screen
 }
 
-void Game::clean()
+void Lizzy2D::clean()
 {
     std::cout << "cleaning game\n";
     SDL_DestroyWindow(m_pWindow);
